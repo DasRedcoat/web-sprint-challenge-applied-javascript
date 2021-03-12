@@ -1,4 +1,27 @@
+
+
 const Header = (title, date, temp) => {
+  constructor(headerAppender) 
+    this.title = title;
+    this.date = date;
+    this.temp = temp;
+  
+
+  // const header = document.createElement('div');
+  // header.classList.add('header')
+
+  // const date = document.createElement('span');
+  // date.classList.add('date')  
+  // date.textContent = ` ${ date }`
+
+  // const title = document.createElement('h1');
+  // h1.textContent = ` ${ title }`
+
+  // const temp = document.createElement('span');
+  // temp.classList.add('temp')
+  // temp.textContent = ` ${temp}`
+
+
   // TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
@@ -13,7 +36,7 @@ const Header = (title, date, temp) => {
   //
 }
 
-const headerAppender = (selector) => {
+const headerAppender = (header) => {
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.
