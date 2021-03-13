@@ -1,27 +1,31 @@
+import axios from "axios"
 import { createBroadcastChannel } from "msw/lib/types/utils/createBroadcastChannel"
+
 
 const Card = (article) => {
   constructor(headline, authorPhoto, authorName) {
+ // initiate the elements
+ const card = document.createElement('div')
+ const headline = document.createElement('div')
+ const author = document.createElement('div')
+ const imgContainer = document.createElement('div')
+ const img = document.createElement('img')
+ const authorName = document.createElement('span')
 
-  }
-  // initiate the elements
-  const card = document.createElement('div')
-  const headline = document.createElement('div')
-  const author = document.createElement('div')
-  const imgContainer = document.createElement('div')
-  const img = document.createElement('img')
-  const authorName = document.createElement('span')
 
-  // set class names
-  card.classList.add('card')
-  headline.classList.add('headline')
-  author.classList.add('author')
-  imgContainer.classList.add('img-container')
+ // set class names
+ card.classList.add('card')
+ headline.classList.add('headline')
+ author.classList.add('author')
+ imgContainer.classList.add('img-container')
 
-  // set attributes
-  headline.textContent = `${headline}`
-  img.src = `${authorPhoto}`
-  authorName.textContent = `By ${authorName}`
+
+ // set attributes
+ headline.textContent = `${headline}`
+ img.src = `${authorPhoto}`
+ authorName.textContent = `By ${authorName}`
+}
+ 
 
 
   // TASK 5
@@ -45,6 +49,12 @@ const Card = (article) => {
 }
 
 const cardAppender = (selector) => {
+  axios
+  .get(`https://lambda-times-api.herokuapp.com/articles`)
+  .then (response) => {
+    // I have a build error in my live server, it's been happening all week, so this one is tough, already planning on flexing.
+  }
+
   // TASK 6
   // ---------------------
   // Implement this function that takes a css selector as its only argument.

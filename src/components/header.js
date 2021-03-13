@@ -26,13 +26,17 @@
       date.classList.add('date')  
       date.textContent = `${ date }`
 
+
       const title = document.createElement('h1');
       h1.textContent = `${ title }`
 
       const temp = document.createElement('span');
       temp.classList.add('temp')
       temp.textContent = `${ temp }`
-}
+
+      header.append(title, date, temp)
+        return Header
+  }
 
  // TASK 2
   // ---------------------
@@ -41,12 +45,7 @@
   // It should append the header to the element in the DOM that matches the given selector.
   //
 
-const headerAppender = (document.getElementsByClassName(".header-container")) => {
-    Header.appendChild(date)
-    Header.appendChild(title)
-    Header.appendChild(temp)
-  }
-  return headerAppender
-}
+const headerAppender = (document.querySelector(".header-container"))
+Header.appendChild(headerAppender)
 
-export { Header, headerAppender}
+export { Header, headerAppender }
